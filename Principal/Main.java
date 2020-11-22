@@ -25,7 +25,7 @@ public class ExamenU3_Colas2 {
                         c.Cliente("Vip", vip, i);
                     } else {
                         i++;
-                        System.out.println("Cliente" + i + " Comuns");
+                        System.out.println("Cliente" + i + " Comun");
                         c.Cliente("Comun", vip, i);
                     }
                     break;
@@ -48,7 +48,8 @@ public class ExamenU3_Colas2 {
                     break;
                 case 4:
                     if (!c.isEmpty()) {
-                        c.Mostrar();
+                        c.MostrarColaVip();
+                        c.MostrarColaComun();
                     } else {
                         System.out.println("Las colas estan vacias");
                     }
