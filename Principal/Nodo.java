@@ -14,4 +14,9 @@ public class Nodo {
         this.siguiente = null;
     }
 
+    @Override
+    public String toString() {
+        return " [" + tipo + " " + i + "]";
+    }
+
 }
