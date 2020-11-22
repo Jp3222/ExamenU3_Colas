@@ -107,9 +107,9 @@ public class Cola {
     public void MostrarColaVip() {
         if (!VipIsEmpty()) {
             Nodo r1 = inicioVip;
-            System.out.println("Clientes: ");
+            System.out.print("Clientes:");
             while (r1 != null) {
-                System.out.print("[" + r1.tipo + " " + r1.i + "]");
+                System.out.print(r1);
                 r1 = r1.siguiente;
             }
             System.out.println("");
@@ -123,7 +123,7 @@ public class Cola {
             Nodo r2 = inicioComun;
             System.out.print("Clientes: ");
             while (r2 != null) {
-                System.out.print("[" + r2.tipo + " " + r2.i + "]");
+                System.out.print(r2);
                 r2 = r2.siguiente;
             }
             System.out.println("");
