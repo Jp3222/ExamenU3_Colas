@@ -9,6 +9,7 @@ public class ExamenU3_Colas2 {
         Cola c = new Cola();
         int opc, i = 0;
         do {
+          
             System.out.println("--- Banco xD ---"
                     + "\n[1]Nuevo cliente"
                     + "\n[2]Pasar a ventanilla"
@@ -19,12 +20,15 @@ public class ExamenU3_Colas2 {
             switch (opc) {
                 case 1:
                     boolean vip = vip();
-                    if (vip) {
+                    if (i <= 0) {
+                        i = (int) ((Math.random() * 10) + 1);
+                    } else {
                         i++;
+                    }
+                    if (vip) {
                         System.out.println("Cliente" + i + " Vip");
                         c.Cliente("Vip", vip, i);
                     } else {
-                        i++;
                         System.out.println("Cliente" + i + " Comun");
                         c.Cliente("Comun", vip, i);
                     }
@@ -61,6 +65,7 @@ public class ExamenU3_Colas2 {
                     System.out.println("Opcion Erronea");
             }
         } while (opc != 5);
+
     }
 
     public static boolean vip() {
