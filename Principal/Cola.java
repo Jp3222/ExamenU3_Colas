@@ -104,21 +104,32 @@ public class Cola {
         }
     }
 
-    public void Mostrar() {
-        Nodo r1 = inicioVip, r2 = inicioComun;
-        System.out.print("Cliente: ");
-        while (r1 != null) {
-            System.out.print("[" + r1.tipo + " " + r1.i + "]");
-            r1 = r1.siguiente;
+    public void MostrarColaVip() {
+        if (!VipIsEmpty()) {
+            Nodo r1 = inicioVip;
+            System.out.println("Clientes: ");
+            while (r1 != null) {
+                System.out.print("[" + r1.tipo + " " + r1.i + "]");
+                r1 = r1.siguiente;
+            }
+        } else {
+            System.out.println("La cola vip esta vacia");
         }
-        System.out.print("\nCliente: ");
-        while (r2 != null) {
-            System.out.print("[" + r2.tipo + " " + r2.i + "]");
-            r2 = r2.siguiente;
+    }
+
+    public void MostrarColaComun() {
+        if (!ComunIsEmpty()) {
+            Nodo r2 = inicioComun;
+            System.out.println("Clientes: ");
+            while (r2 != null) {
+                System.out.print("[" + r2.tipo + " " + r2.i + "]");
+                r2 = r2.siguiente;
+            }
+            System.out.println("");
+        } else {
+            System.out.println("La cola comun esta vacia");
         }
-
-        System.out.println("");
-
     }
 
 }
+
