@@ -112,6 +112,7 @@ public class Cola {
                 System.out.print("[" + r1.tipo + " " + r1.i + "]");
                 r1 = r1.siguiente;
             }
+            System.out.println("");
         } else {
             System.out.println("La cola vip esta vacia");
         }
@@ -120,7 +121,7 @@ public class Cola {
     public void MostrarColaComun() {
         if (!ComunIsEmpty()) {
             Nodo r2 = inicioComun;
-            System.out.println("Clientes: ");
+            System.out.print("Clientes: ");
             while (r2 != null) {
                 System.out.print("[" + r2.tipo + " " + r2.i + "]");
                 r2 = r2.siguiente;
@@ -132,4 +133,3 @@ public class Cola {
     }
 
 }
-
